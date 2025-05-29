@@ -151,7 +151,7 @@
     chrome.runtime.sendMessage({ action: "updateStatus", message: `Création du fichier ZIP avec ${downloadedCount} documents téléchargés sur ${totalDocumentsFound} trouvés...` });
     mainZip.generateAsync({ type: "blob" })
       .then(function (content) {
-        saveAs(content, `${sectionName}.zip`);
+        saveAs(content, `MesCoursCahierDePrepa.zip`);
         chrome.runtime.sendMessage({ action: "updateStatus", message: "Téléchargement ZIP terminé !" });
       })
       .catch(error => {
