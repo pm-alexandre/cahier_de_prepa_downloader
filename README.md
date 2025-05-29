@@ -47,6 +47,13 @@ Pour utiliser cette extension, vous devez la charger en mode développeur dans v
 4.  **Suivez le statut** : La popup affichera l'état du téléchargement (exploration des dossiers, téléchargement des fichiers, etc.).
 5.  **Récupérez votre ZIP** : Une fois le processus terminé, un fichier `.zip` contenant tous vos documents sera automatiquement téléchargé dans votre dossier de téléchargements par défaut.
 
+![ext_cdp_1](https://github.com/user-attachments/assets/5120c956-3181-4848-b423-874cf63e115a)
+![ext_cdp_2](https://github.com/user-attachments/assets/3796b4d5-6446-4f7c-9d9f-5f5955d9c240)
+<img width="263" alt="ext_cdp_3" src="https://github.com/user-attachments/assets/4b150f1a-9155-4283-8152-49df2deb88d4" />
+
+
+
+
 ---
 
 ## Comment ça marche (pour les curieux)
