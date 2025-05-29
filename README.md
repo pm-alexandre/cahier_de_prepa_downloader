@@ -7,7 +7,7 @@
 
 ## Description
 
-**Cahier de Prépa Downloader** est une extension de navigateur (initialement pour Chrome) conçue pour simplifier le téléchargement de documents et de dossiers depuis le site Cahier de Prépa. Fini les téléchargements manuel, cette extension vous permet de récupérer l'intégralité des contenus de cours, de DM, de DS, et autres ressources, tout en respectant l'arborescence des dossiers et en ignorant les documents récents indésirables.
+**Cahier de Prépa Downloader** est une extension de navigateur (initialement pour Chrome) conçue pour simplifier le téléchargement de documents et de dossiers depuis le site Cahier de Prépa. Fini les téléchargements manuel, cette extension vous permet de récupérer l'intégralité des contenus de cours, de DM, de DS, et autres ressources, tout en respectant l'arborescence des dossiers.
 
 ---
 
