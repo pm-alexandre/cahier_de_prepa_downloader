@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cahier de Prepa Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            color: #0056b3;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e2e6ea;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #495057;
+            text-align: left;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cahier de Prepa Downloader</h2>
+    <button id="downloadButton">Lancer le telechargement de vos fichiers</button>
+    <div id="status">En attente...</div>
+    <script src="popup.js"></script>
+</body>
+</html>

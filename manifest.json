@@ -1,0 +1,26 @@
+
+{
+  "manifest_version": 3,
+  "name": "Cahier de Prepa Downloader",
+  "version": "1.0",
+  "description": "Télécharge tous les documents d'une section sur Cahier de Prépa en conservant la structure des dossiers.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://www.cahier-de-prepa.fr/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
