@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cahier de Prepa Downloader</title>
+    <meta charset="utf-8">
+    <title>Cahier de Prépa Downloader</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,6 +11,10 @@
             text-align: center;
             background-color: #f4f4f4;
             color: #333;
+            display: flex; /* Utilisation de flexbox pour l'ensemble du body */
+            flex-direction: column; /* Les éléments s'empilent verticalement */
+            min-height: 180px; /* Hauteur minimale pour la popup */
+            justify-content: space-between; /* Pour pousser le footer vers le bas */
         }
         h2 {
             color: #0056b3;
@@ -39,17 +44,64 @@
             font-size: 0.9em;
             color: #495057;
             text-align: left;
-            min-height: 40px;
+            min-height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-grow: 1;
+            margin-bottom: 20px; 
+        }
+
+        #footer-support {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end; 
+            width: 100%;
+            margin-top: auto; 
+        }
+
+        #supsupport-text {
+            font-size: 0.7em;
+            color: #9d9d9d;
+            text-align: left;
+            margin: 0; 
+            padding-right: 5px;
+        }
+
+        #support-link-container {
+            font-size: 0.7em;
+            text-align: right;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #support-link-container a {
+            color: #3d9bff;
+            text-decoration: none;
+        }
+        #support-link-container a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h2>Cahier de Prepa Downloader</h2>
-    <button id="downloadButton">Lancer le telechargement de vos fichiers</button>
+    <h2>Cahier de Prépa Downloader</h2>
+    <button id="downloadButton">Lancer le téléchargement</button>
     <div id="status">En attente...</div>
+
+    <div id="footer-support">
+        <p id="supsupport-text">
+            Vous appréciez l'extension ?
+        </p>
+
+        <p id="support-link-container">
+            <a href="VOTRE_LIEN_DE_DONATION_ICI" target="_blank" title="Soutenez le développeur">Offrez une copie-double !</a>
+        </p>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
