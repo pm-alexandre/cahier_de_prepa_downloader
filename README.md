@@ -32,9 +32,14 @@ Pour utiliser cette extension, vous devez la charger en mode développeur dans v
     * Dans la barre d'adresse, tapez `chrome://extensions` et appuyez sur Entrée.
 3.  **Activez le mode développeur** :
     * Dans le coin supérieur droit de la page des extensions, activez le bouton **"Mode développeur"** (Developer mode).
+<img width="150" alt="image" src="https://github.com/user-attachments/assets/d7cc8a24-61fe-45a4-acf1-ca200fbe3c03" />
+
 4.  **Chargez l'extension** :
     * Cliquez sur le bouton **"Charger l'extension non empaquetée"** (Load unpacked).
     * Naviguez jusqu'au dossier où vous avez décompressé le code de l'extension (`cahier-de-prepa-downloader`) et sélectionnez-le.
+![image](https://github.com/user-attachments/assets/cddd0f13-e818-4a87-9392-84e414e1b5af)
+
+    
 5.  **Vérifiez l'installation** : L'extension "Cahier de Prépa Downloader" devrait maintenant apparaître dans votre liste d'extensions. Vous pouvez cliquer sur l'icône en forme de pièce de puzzle (Extensions) dans la barre d'outils de Chrome et "épingler" l'icône de l'extension pour un accès facile.
 
 ---
