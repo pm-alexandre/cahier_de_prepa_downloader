@@ -21,8 +21,9 @@
             margin-bottom: 20px;
             font-size: 1.2em;
         }
-        button {
-            background-color: #007bff;
+        /* Style du bouton conteneur */
+        #downloadButton {
+            background-color: #007bff; /* Couleur de fond par défaut */
             color: white;
             padding: 10px 15px;
             border: none;
@@ -32,10 +33,44 @@
             transition: background-color 0.2s ease;
             width: 100%;
             box-sizing: border-box;
+            position: relative; /* Important pour positionner la barre */
+            overflow: hidden; /* Cache ce qui dépasse de la barre */
+            height: 40px; /* Hauteur fixe pour le bouton */
+            display: flex; /* Permet d'aligner le texte/progression */
+            align-items: center;
+            justify-content: center;
         }
-        button:hover {
+        #downloadButton:hover:not(.disabled) { /* Hover actif si pas désactivé */
             background-color: #0056b3;
         }
+        #downloadButton.disabled { /* Style quand le bouton est désactivé */
+            opacity: 0.7;
+            cursor: not-allowed;
+            background-color: #007bff; /* Garde la couleur de base */
+        }
+
+        /* Barre de progression interne */
+        #progressBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%; /* Commence à 0% */
+            background-color: #28a745; /* Couleur verte pour la progression */
+            border-radius: 5px; /* Arrondi les bords */
+            transition: width 0.3s ease-in-out; /* Animation fluide */
+            z-index: 1; /* S'assure que la barre est en dessous du texte */
+        }
+
+        /* Texte affiché dans le bouton (initial ou de progression) */
+        #buttonText {
+            position: relative; /* Positionne le texte au-dessus de la barre */
+            z-index: 2; /* S'assure que le texte est au-dessus de la barre */
+            color: white; /* Couleur du texte */
+            text-align: center;
+            width: 100%; /* S'assure que le texte prend toute la largeur */
+        }
+
         #status {
             margin-top: 20px;
             padding: 10px;
@@ -48,48 +83,55 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-grow: 1;
-            margin-bottom: 20px; 
+            flex-grow: 1; /* Permet à la div de prendre l'espace restant */
+            margin-bottom: 20px; /* Ajoute un peu d'espace avant le footer */
         }
 
+        /* Conteneur pour le footer */
         #footer-support {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-end; 
+            display: flex; /* Utilisation de flexbox pour aligner gauche/droite */
+            justify-content: space-between; /* Pousse les éléments aux extrémités */
+            align-items: flex-end; /* Aligne les éléments en bas si leurs hauteurs diffèrent */
             width: 100%;
-            margin-top: auto; 
+            margin-top: auto; /* Pousse ce bloc tout en bas du conteneur parent (body) */
         }
 
+        /* Texte "Vous appréciez l'extension ?" */
         #supsupport-text {
             font-size: 0.7em;
             color: #9d9d9d;
-            text-align: left;
-            margin: 0; 
-            padding-right: 5px;
+            text-align: left; /* Alignement explicite à gauche */
+            margin: 0; /* Supprime les marges par défaut des paragraphes */
+            padding-right: 5px; /* Petit espace à droite du texte */
         }
 
+        /* Conteneur du lien de donation avec l'icône */
         #support-link-container {
             font-size: 0.7em;
-            text-align: right;
-            margin: 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            text-align: right; /* Alignement explicite à droite */
+            margin: 0; /* Supprime les marges par défaut des paragraphes */
+            position: relative; /* Pour positionner l'icône */
+            display: flex; /* Permet d'aligner le texte du lien et l'icône */
+            align-items: center; /* Centre verticalement le texte et l'icône */
+            gap: 5px; /* Espace entre le texte du lien et l'icône */
         }
 
         #support-link-container a {
-            color: #3d9bff;
+            color: #007bff;
             text-decoration: none;
         }
         #support-link-container a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
     <h2>Cahier de Prépa Downloader</h2>
-    <button id="downloadButton">Lancer le téléchargement</button>
+    <button id="downloadButton">
+        <div id="progressBar"></div>
+        <span id="buttonText">Lancer le téléchargement</span>
+    </button>
     <div id="status">En attente...</div>
 
     <div id="footer-support">

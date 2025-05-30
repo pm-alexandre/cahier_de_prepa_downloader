@@ -22,5 +22,18 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.cahier-de-prepa.fr/*"],
+      "js": ["jszip.min.js", "FileSaver.min.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["jszip.min.js", "FileSaver.min.js"],
+      "matches": ["*://*.cahier-de-prepa.fr/*"]
+    }
+  ]
 }
